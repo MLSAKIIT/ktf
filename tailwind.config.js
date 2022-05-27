@@ -1,12 +1,10 @@
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "about-ktf": "url('/about-ktf-bg.webp')",
-      },
       flex: {
         '2': '2 2 0%',
         '3': '3 3 0%',
@@ -17,7 +15,12 @@ module.exports = {
     },
     letterSpacing: {
       widest: '.25em',
+    },
+    fontFamily: {
+      Poppins: ['Poppins', 'sans-serif'],
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
